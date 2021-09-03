@@ -148,7 +148,7 @@ public class MultipliersManager {
 		if (levelledMobsMultiplier == 0) return 0;
 		if ( levelledMobs.isLevelled(( LivingEntity) entity) ) {
 			int level = levelledMobs.getLevelOfMob((LivingEntity) entity) - 1;
-			return amountToAdd * levelledMobsMultiplier * level;
+			return amountToAdd * Math.pow(levelledMobsMultiplier, level);
 		}
 		return 0;
 	}
